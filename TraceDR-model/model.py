@@ -22,8 +22,8 @@ class FullEncoder(nn.Module):
 
         # load LM
         if encoder_lm == "BERT":
-            self.tokenizer = transformers.BertTokenizer.from_pretrained("hfl_chinese-roberta-wwm-ext")
-            self.model = transformers.BertModel.from_pretrained("hfl_chinese-roberta-wwm-ext")
+            self.tokenizer = transformers.BertTokenizer.from_pretrained("hfl/chinese-roberta-wwm-ext")
+            self.model = transformers.BertModel.from_pretrained("hfl/chinese-roberta-wwm-ext")
             self.sep_token = "[SEP]"
         elif encoder_lm == "DistilBERT":
             self.tokenizer = transformers.DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
